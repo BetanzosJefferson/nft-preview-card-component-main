@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root{
+	--Cyan: hsl(178, 100%, 50%);
+	--Soft-blue: hsl(215, 51%, 70%);
+	--Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+	--Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+	--Very-dark-blue-line: hsl(215, 32%, 27%);
+	--White: hsl(0, 0%, 100%);
+	--Family:https://fonts.google.com/specimen/Outfit;
+}
+html{
+	font-size: 62.5%;
+	font-family: 'Outfit', sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: var(--Very-dark-blue-main-BG);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+img{
+	height: auto;
+	max-width: 100%;
+}
+p{
+	font-size:18px ;
+}
+.card{
+	-webkit-box-shadow: 0px 9px 27px 7px rgba(0,0,0,0.37); 
+	box-shadow: 0px 9px 27px 7px rgba(0,0,0,0.37);	
+	margin: 2rem ;
+	max-width: 30.8rem;
+	padding: 2rem;
+	border-radius: 20px;
+	background-color: var(--Very-dark-blue-card-BG);
+}
+.card__image{
+	background-image: url(../images/image-equilibrium.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 30rem;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.overlay{
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	background-color: var(--Cyan);
+	transition: opacity 0.4s ease;
+}
+.card__image> img {
+	position: absolute;
+	visibility: hidden;
+	transition: opacity 0.4s ease;
+}
+.card__image:hover >img{
+	visibility: visible;
+}
+.card__image:hover .overlay{
+	opacity: 0.5;
+}
+
+.resume{
+	margin-top: 2rem;
+}
+.resume h3{
+	font-size: 2.5rem;
+	color: var(--White);
+}
+.resume p{
+	font-weight: 300;
+	color: var(--Soft-blue);
+}
+
+.stats,.eth, .time{
+	display: flex;
+	align-items:center
+}
+.stats{
+	justify-content: space-between;
+}
+.eth,.time{
+	column-gap: 1.2rem;
+}
+.eth p{
+	font-weight: 600;
+	color: var(--Cyan);
+}
+.time{
+	color: var(--Soft-blue) ;
+}
+.line{
+	height: 1px;
+	width: auto;
+	background-color: var(--Very-dark-blue-line);
+}
+.porfile{
+	margin-top: 1rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	column-gap: 1.2rem;
+}
+.porfile img{
+	border-radius: 50%;
+	border : 1px solid white;
+	max-height: 4rem;
+}
+.porfile p{
+	color: var(--Soft-blue);
+}
+.porfile p > span{
+	color: var(--White); 
+
+}
+
+/*Activate hover text
+*/
+.resume h3:hover, .porfile p> span:hover{
+	color: var(--Cyan);
+	cursor: pointer;
+}
+
+
